@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            position: auto;
+        }
+        header{
+            padding:20px;
+            margin: 2%;
+            margin-left: 20%;
+            margin-right: 20%;
+            background: linear-gradient(rgba(233, 187, 60, 0.954),rgb(205, 83, 83));
+            background-size: 2%;   
+        }
+        main{
+        
+            padding:20px;
+            margin-right:40%; 
+            margin-bottom: 2%;   
+        }
+        .about{
+            text-align: center;
+            padding:4px;
+            margin:2%;
+            /* margin-right:70%; */
+            /* background: linear-gradient(rgb(183, 143, 96),rgb(199, 116, 56)); */
+            font-family:'Courier New', Courier, monospace;
+            color:rgba(0, 0, 0, 0.763);
+            font-size: large;
+        }
+        h1{
+            margin-top:2%;
+        }
+        h1:hover{
+            color:rgb(141, 105, 223);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9e3ba;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .container {
+            
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+          }
+          
+          h1 {
+            text-align: center;
+            margin-top: 1px;
+            margin-bottom:2px;          
+        }
+
+          form {
+            display: grid;
+            gap: 20px;
+          }
+          
+          .form-group {
+            display: grid;
+            gap: 10px;
+          }
+          
+          label {
+            font-weight: bold;
+          }
+          
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          textarea,
+          select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+          
+          input[type="radio"] {
+            margin-right: 5px;
+          }
+          
+          button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+          }
+          
+    </style>
+</head>
+<body>
+    <header>
+      <i><center><h1>COACHING CLASSES</h1></center></i> 
+       <center><h3>Let's Learn and Grow</h3></center>
+    </header>
+    
+    <div class="about">
+      <h4>"The way to Destination"</h4>
+      
+    </div>
+    <center><h1>Register Yourself For the Session!!</h1></center>
+    
+
+    <div class="container">
+        <h1>Coaching Center Registration</h1>
+        <form id="registrationForm" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="course">Course:</label>
+            <select id="course" required>
+              <option value="">Select a Course</option>
+              <option value="math">Math</option>
+              <option value="science">Science</option>
+              <option value="english">English</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female">Female</label>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+          </div>
+    
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+          
+            // Fetch form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var course = document.getElementById("course").value;
+            var message = document.getElementById("message").value;
+          
+            // Perform form validation and submission logic
+            // Here you can add your own custom logic or use a library like jQuery/AJAX to submit the form data to a server
+          
+            // Reset form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("course").value = "";
+            document.getElementById("message").value = "";
+          
+            alert("Thank you for registering!");
+          }
+          
+    </script>
+    
+</body>
+</html>
